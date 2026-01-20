@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Calculate your exact age in years, months, days, hours, and minutes with our colorful and precise Age Calculator. SEO optimized and user friendly.">
+    <meta name="keywords" content="age calculator, calculate age, exact age, age in minutes, date of birth calculator">
+    <meta name="author" content="Age Calculator App">
+    <title>Precise Age Calculator - Years, Months, Minutes</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-animation"></div>
+    <main class="glass-container">
+        <h1>Age Calculator</h1>
+        <p class="subtitle">Discover your age down to the minute!</p>
+        
+        <form id="ageForm">
+            <div class="input-group">
+                <label for="dob">Date of Birth</label>
+                <input type="datetime-local" id="dob" required>
+            </div>
+
+            <div class="toggle-group">
+                <label class="switch">
+                    <input type="checkbox" id="compareModeToggle">
+                    <span class="slider round"></span>
+                </label>
+                <span id="toggleLabel">Calculate against: <strong>NOW</strong></span>
+            </div>
+
+            <div class="input-group hidden" id="targetDateGroup">
+                <label for="targetDate">Target Date</label>
+                <input type="datetime-local" id="targetDate">
+            </div>
+            
+            <button type="button" id="calcBtn">Calculate Age</button>
+        </form>
+
+        <div id="result" class="result-container hidden">
+            <div class="result-box years">
+                <span class="value" id="resYears">0</span>
+                <span class="label">Years</span>
+            </div>
+            <div class="result-box months">
+                <span class="value" id="resMonths">0</span>
+                <span class="label">Months</span>
+            </div>
+            <div class="result-box days">
+                <span class="value" id="resDays">0</span>
+                <span class="label">Days</span>
+            </div>
+            <div class="result-box hours">
+                <span class="value" id="resHours">0</span>
+                <span class="label">Hours</span>
+            </div>
+            <div class="result-box minutes">
+                <span class="value" id="resMinutes">0</span>
+                <span class="label">Minutes</span>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
